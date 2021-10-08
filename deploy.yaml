@@ -321,7 +321,7 @@ spec:
               - SYS_ADMIN
       containers:
         - name: nginx-ingress-controller
-          image: registry-vpc.cn-shanghai.aliyuncs.com/acs/aliyun-ingress-controller:v0.44.0.5-e66e17ee3-aliyun
+          image: itworker365/controller:v1.0.0
           imagePullPolicy: IfNotPresent
           lifecycle:
             preStop:
@@ -516,7 +516,7 @@ spec:
     spec:
       containers:
         - name: create
-          image: registry-vpc.cn-shanghai.aliyuncs.com/acs/kube-webhook-certgen:v1.5.1
+          image: itworker365/kube-webhook-certgen:latest
           imagePullPolicy: IfNotPresent
           args:
             - create
@@ -550,7 +550,7 @@ spec:
     spec:
       containers:
         - name: patch
-          image: registry-vpc.cn-shanghai.aliyuncs.com/acs/kube-webhook-certgen:v1.5.1
+          image: itworker365/kube-webhook-certgen:latest
           imagePullPolicy: IfNotPresent
           args:
             - patch
